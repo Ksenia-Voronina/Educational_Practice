@@ -1,0 +1,59 @@
+﻿<Page x:Class="testLab.PageTest"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:testLab"
+      mc:Ignorable="d" Background="White"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageTest">
+
+    <Grid Height="450" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Background="LightBlue">
+            <TextBlock x:Name="quest1" TextWrapping="Wrap" Margin="5"/>
+        </StackPanel>
+        <TextBlock x:Name="quest2" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Margin="5"/>
+        <StackPanel Grid.Column="0" Grid.Row="2" Background="LightBlue">
+            <TextBlock x:Name="quest3"  TextWrapping="Wrap" Margin="5"/>
+        </StackPanel>
+        <TextBlock x:Name="quest4" Grid.Column="0" Grid.Row="3" TextWrapping="Wrap" Margin="5"/>
+        <StackPanel x:Name="answerQuest1" Grid.Row="0" Grid.Column="1" Background="LightBlue">
+            <RadioButton x:Name="answer" Content="Потребность в образовании, искусстве" GroupName="Quest1" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer2" Content="Потребность в комфорте" GroupName="Quest1" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer3" Content="Потребность в духовном развитии" GroupName="Quest1" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer4" Content="Потребность человека в пище, жилище" GroupName="Quest1" Margin="5,6,0,0"/>
+        </StackPanel>
+        <StackPanel x:Name="answerQuest2" Grid.Row="1" Grid.Column="1" >
+            <RadioButton x:Name="answer5" Content="Командной" GroupName="Quest2" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer6" Content="Рыночной" GroupName="Quest2" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer7" Content="Натуральной" GroupName="Quest2" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer8" Content="Смешанной" GroupName="Quest2" Margin="5,6,0,0"/>
+        </StackPanel>
+        <StackPanel x:Name="answerQuest3" Grid.Row="2" Grid.Column="1" Background="LightBlue">
+            <RadioButton x:Name="answer9" Content="Земельная рента" GroupName="Quest3" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer10" Content="Абсолютная рента" GroupName="Quest3" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer11" Content="Дифференциальная рента" GroupName="Quest3" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer12" Content="Относительная рента" GroupName="Quest3" Margin="5,6,0,0"/>
+        </StackPanel>
+        <StackPanel x:Name="answerQuest4" Grid.Row="3" Grid.Column="1">
+            <RadioButton x:Name="answer13" Content="Либеральный" GroupName="Quest4" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer14" Content="Эволюционный" GroupName="Quest4" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer15" Content="Революционный" GroupName="Quest4" Margin="5,6,0,0"/>
+            <RadioButton x:Name="answer16" Content="Шоковая терапия" GroupName="Quest4" Margin="5,6,0,0"/>
+        </StackPanel>
+        <StackPanel Background="LightBlue" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button x:Name="checkResult" Content="Проверить результат" Margin="0,20" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Click="checkResult_Click" Background="LightSalmon"/>
+        </StackPanel>
+    </Grid>
+</Page>
